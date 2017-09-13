@@ -80,12 +80,12 @@ const google_cloud_vision = new GoogleCloudVision({
  */
 exports.handler = (event, context, callback) => {
 	var sdk = new BoxSDK({
-		clientID: process.env.CLIENT_ID,
-		clientSecret: process.env.CLIENT_SECRET,
+		clientID: process.env.BOX_CLIENT_ID,
+		clientSecret: process.env.BOX_CLIENT_SECRET,
 		appAuth: {
-			keyID: process.env.KEY_ID,
-			privateKey: Unescape(process.env.PRIVATE_KEY),
-			passphrase: process.env.PASSPHRASE
+			keyID: process.env.BOX_KEY_ID,
+			privateKey: Unescape(process.env.BOX_PRIVATE_KEY),
+			passphrase: process.env.BOX_PASSPHRASE
 		},
 	});
 
