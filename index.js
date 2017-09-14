@@ -54,7 +54,7 @@ exports.handler = (event, context, callback) => {
 	});
 
 	var webhookData = JSON.parse(event.body);
-	var userID = webhookData.source.created_by.id;
+	var userID = webhookData.source.owned_by.id;
 	var fileID = webhookData.source.id;
 
 	var client = sdk.getAppAuthClient('user', userID);
