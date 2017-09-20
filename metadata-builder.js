@@ -6,14 +6,12 @@
  */
 
 const skillsData = {
-	'skills_data': [{
-		'type': 'skills_data',
-		'skills_data_type': '',
-		'skill': {},
-		'invocation': {},
-		'title': '',
-		'entries': []
-	}]
+	'type': 'skills_data',
+	'skills_data_type': '',
+	'skill': {},
+	'invocation': {},
+	'title': '',
+	'entries': []
 }
 
 
@@ -63,7 +61,7 @@ exports.getMetadataValueForEntityAnnotations = (annotationImageResponse) => {
 	metadata['title'] = 'Topics';
 	metadata['entries'] = entries;
 	metadata = {
-		keywords: JSON.stringify(metadata)
+		keywords: JSON.stringify([metadata])
 	};
 	return metadata;
 }
@@ -98,7 +96,7 @@ exports.getMetadataValueForFullTextAnnotations = (annotationImageResponse) => {
 	metadata['title'] = 'OCR';
 	metadata['entries'] = entries;
 	metadata = {
-		transcripts: JSON.stringify(metadata)
+		transcripts: JSON.stringify([metadata])
 	};
 	return metadata;
 }
